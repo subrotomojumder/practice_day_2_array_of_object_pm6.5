@@ -16,28 +16,23 @@ int main()
             cin >> a[i];
             a[i] % 2 == 0 ? even_count++ : odd_count++;
         }
-        if (n % 2 == 0)
+        if (n % 2 != 0)
         {
-            // cout << odd_count << " " << even_count;
-             
-            if (odd_count > even_count)
-            {
-               int dif = odd_count - even_count;
-for (int i = 0; i < dif / 2; i++)
-{
-    /* code */
-}
-
-            }
-            else
-            {
-                dif = even_count - odd_count;
-            }
-            cout << dif;
+            cout << -1;
+        }
+        else if (odd_count == even_count)
+        {
+            cout << 0;
+        }
+        else if (odd_count > even_count)
+        {
+            int operational = odd_count - (n / 2);
+            cout << operational;
         }
         else
         {
-            cout << -1;
+            int operational = even_count - (n / 2);
+            cout << operational;
         }
         cout << endl;
     }
